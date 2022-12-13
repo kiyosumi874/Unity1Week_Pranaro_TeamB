@@ -9,9 +9,30 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/PlayScene.unity
+    path: Assets/Scenes/SelectScene.unity
     guid: 1792c94cfbba9e34d9eea6969323dd0c
   - enabled: 1
+    path: Assets/Scenes/EasyScene.unity
+    guid: cff101b8fbf2e2849a9255ec8cf7835b
+  - enabled: 1
+    path: Assets/Scenes/NormalScene.unity
+    guid: 06b4021e822718f488cf69e5ba15d1e6
+  - enabled: 1
+    path: Assets/Scenes/HardScene.unity
+    guid: d5c6f354a01559743b44136db4cc3b93
+  - enabled: 1
+    path: Assets/naichilab/unity-simple-ranking/Scenes/Ranking.unity
+    guid: 152244f5855414ac4a3874f14efa583c
+  - enabled: 1
+    path: Assets/Scenes/Failed.unity
+    guid: 490fc63b30318fd47992a35167b162d7
+  - enabled: 1
+    path: Assets/Scenes/Instruction.unity
+    guid: f2adaf0377e409045b9b7b83a902f26f
+  - enabled: 0
+    path: Assets/Scenes/FailedScene.unity
+    guid: d88f99f0a692e554ba360d3c3ebaebc2
+  - enabled: 0
     path: Assets/Scenes/ResultScene.unity
     guid: d78cdf2852f5a56409e7fa644886409a
   m_configObjects: {}

@@ -9,9 +9,13 @@ public static class SceneLoader
     public enum Scene
     {
         Title,
-        Play,
+        Select,
+        Easy,
+        Normal,
+        Hard,
         Failed,
         Success,
+        Instruction,
         None
     }
 
@@ -19,9 +23,13 @@ public static class SceneLoader
         = new Dictionary<Scene, Action>()
         {
             {Scene.Title, ChangeToTitle },
-            {Scene.Play, ChangeToPlay },
+            {Scene.Select, ChangeToSelect },
+            {Scene.Easy, ChangeToEasy },
+            {Scene.Normal, ChangeToNormal },
+            {Scene.Hard, ChangeToHard },
             {Scene.Failed, ChangeToFailed },
             {Scene.Success, ChangeToSuccess },
+            {Scene.Instruction, ChangeToInstruction },
             {Scene.None, Error }
         };
 
@@ -35,19 +43,39 @@ public static class SceneLoader
         SceneManager.LoadScene("TitleScene");
     }
 
-    private static void ChangeToPlay()
+    private static void ChangeToSelect()
     {
-        SceneManager.LoadScene("PlayScene");
+        SceneManager.LoadScene("SelectScene");
+    }
+
+    private static void ChangeToEasy()
+    {
+        SceneManager.LoadScene("EasyScene");
+    }
+
+    private static void ChangeToNormal()
+    {
+        SceneManager.LoadScene("NormalScene");
+    }
+
+    private static void ChangeToHard()
+    {
+        SceneManager.LoadScene("HardScene");
     }
 
     private static void ChangeToFailed()
     {
-        SceneManager.LoadScene("ResultScene");
+        SceneManager.LoadScene("Failed", LoadSceneMode.Additive);
     }
 
     private static void ChangeToSuccess()
     {
-        SceneManager.LoadScene("ResultScene");
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(100);
+    }
+
+    private static void ChangeToInstruction()
+    {
+        SceneManager.LoadScene("Instruction", LoadSceneMode.Additive);
     }
 
     private static void Error()
