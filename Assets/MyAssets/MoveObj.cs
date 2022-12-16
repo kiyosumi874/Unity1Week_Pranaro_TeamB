@@ -8,8 +8,9 @@ public class MoveObj : MonoBehaviour
     [SerializeField] private float power = 1.0f;
     [SerializeField] private float stopPower = 1.0f;
     // Start is called before the first frame update
-    private float nowPower;
+    public float nowPower;
     private State state = null;
+    public float wh;
     void Start()
     {
         nowPower = 0.0f;
@@ -30,24 +31,28 @@ public class MoveObj : MonoBehaviour
                     nowPower = 0.0f;
                 }
             }
-
-            float wh = Input.mouseScrollDelta.y;
-            Debug.Log(wh);
-            if (wh < 0)
-            {
-                nowPower += power * wh;
-            }
-            else
-            {
-                nowPower += stopPower * wh;
-                if (nowPower > 0.0f)
-                {
-                    nowPower = 0.0f;
-                }
-            }
-
-            this.transform.Translate(0.0f, Time.deltaTime * nowPower, 0.0f);
+            mouseScroll();
         }
         
+    }
+
+    public void mouseScroll()
+    {
+        this.wh = Input.mouseScrollDelta.y;
+        Debug.Log(this.wh);
+        if (this.wh < 0)
+        {
+            nowPower += power * this.wh;
+        }
+        else
+        {
+            nowPower += stopPower * this.wh;
+            if (nowPower > 0.0f)
+            {
+                nowPower = 0.0f;
+            }
+        }
+
+        this.transform.Translate(0.0f, Time.deltaTime * nowPower, 0.0f);
     }
 }
