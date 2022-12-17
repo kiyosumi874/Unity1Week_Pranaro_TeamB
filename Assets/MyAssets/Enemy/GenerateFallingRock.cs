@@ -2,27 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingRock : MonoBehaviour
+public class GenerateFallingRock : MonoBehaviour
 {
-    [SerializeField] private float _Speed;
     [SerializeField] private float _span;
     float delta = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject FallingRock;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0.0f, -_Speed * Time.deltaTime * 5.0f, 0.0f);
         this.delta += Time.deltaTime;
         if(this.delta > this._span)
         {
-            Destroy(gameObject);
             this.delta = 0;
+            GameObject go = Instantiate(FallingRock) as GameObject;
+            go.transform.position = new Vector3(0, 25, 0);
         }
     }
 }
