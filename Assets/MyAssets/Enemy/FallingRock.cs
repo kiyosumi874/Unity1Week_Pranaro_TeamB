@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FallingRock : MonoBehaviour
 {
-    [SerializeField] private float _Speed;
-    [SerializeField] private float _span;
+    [SerializeField] public float _Speed;
+    [SerializeField] public float _span;
     float delta = 0;
 
     // Start is called before the first frame update
