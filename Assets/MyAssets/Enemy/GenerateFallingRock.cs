@@ -11,7 +11,7 @@ public class GenerateFallingRock : MonoBehaviour
     float speed;
     float span;
     float GereratePoint;
-    
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -34,4 +34,5 @@ public class GenerateFallingRock : MonoBehaviour
             go.transform.position = transform.Translate(0.0f, this.GereratePoint, 0.0f);
         }
     }
+    */
 }
