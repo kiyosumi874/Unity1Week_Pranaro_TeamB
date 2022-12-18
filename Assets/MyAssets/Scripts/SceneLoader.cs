@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public static class SceneLoader
@@ -83,10 +84,31 @@ public static class SceneLoader
 
     private static void ChangeToSuccess()
     {
-        nowScene = Scene.Success;
+        
         var go = GameObject.Find("DiaNumStr");
         int num = go.GetComponent<DiaNum>().GetDiaNum();
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(num);
+        var go2 = GameObject.Find("Full");
+        int num2 = (int)(go2.GetComponent<Image>().fillAmount * 10.0f);
+        int num3 = 1;
+        switch (nowScene)
+        {
+            case Scene.Easy:
+                num3 = 1;
+                break;
+            case Scene.Normal:
+                num3 = 2;
+                break;
+            case Scene.Hard:
+                num3 = 3;
+                break;
+            case Scene.None:
+                num3 = 1;
+                break;
+            default:
+                break;
+        }
+        nowScene = Scene.Success;
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking((num + num2)*num3);
     }
 
     private static void ChangeToInstruction()

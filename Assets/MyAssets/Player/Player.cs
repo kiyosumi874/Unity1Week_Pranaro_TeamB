@@ -92,5 +92,9 @@ public class Player : MonoBehaviour
     {
         var decreasePal = collision.gameObject.GetComponent<O2Decreaser>().GetDecreasePal();
         o2Gauge.ChangeO2Gauge(-decreasePal);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            diaNum.SubDia();
+        }
     }
 }

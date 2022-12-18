@@ -39,10 +39,10 @@ public class MoveObj : MonoBehaviour
 
     public void mouseScroll()
     {
-        if (this.transform.position.y > 50.0f)
+        if (this.transform.position.y > 15.0f)
         {
             nowPower = 0.0f;
-            this.transform.position = new Vector3(this.transform.position.x, 50.0f, 0.0f);
+            this.transform.position = new Vector3(this.transform.position.x, 15.0f, 0.0f);
             return;
         }
         this.wh = Input.mouseScrollDelta.y;
