@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        o2Gauge.ChangeO2Gauge(-0.2f);
+        var decreasePal = collision.gameObject.GetComponent<O2Decreaser>().GetDecreasePal();
+        o2Gauge.ChangeO2Gauge(-decreasePal);
     }
 }
