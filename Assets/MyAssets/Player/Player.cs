@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     [SerializeField] private float easyLerpPower = 1.5f;
@@ -47,6 +46,20 @@ public class Player : MonoBehaviour
     {
         if (state.CompareState(State.StateType.Play))
         {
+            if (this.transform.position.x > 2.5f)
+            {
+                normalLerpPower = 0.0f;
+                this.transform.position = new Vector3(2.5f, this.transform.position.y, 0.0f);
+                return;
+            }
+
+            if (this.transform.position.x < -2.5f)
+            {
+                normalLerpPower = 0.0f;
+                this.transform.position = new Vector3(-2.5f, this.transform.position.y, 0.0f);
+                return;
+            }
+
             // Vector3でマウス位置座標を取得する
             position = Input.mousePosition;
             // Z軸修正
@@ -73,5 +86,4 @@ public class Player : MonoBehaviour
     {
         o2Gauge.ChangeO2Gauge(-0.2f);
     }
-
 }
