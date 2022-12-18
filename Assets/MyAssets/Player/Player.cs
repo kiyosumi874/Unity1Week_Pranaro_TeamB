@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float lerpPower = 5.0f;
+    [SerializeField] private float easyLerpPower = 1.5f;
+    [SerializeField] private float normalLerpPower = 1.0f;
+    [SerializeField] private float hardLerpPower = 0.5f;
     [SerializeField] private SceneChanger sceneChanger = null;
     [SerializeField] private StateManager stateManager = null;
     [SerializeField] private O2Gauge o2Gauge = null;
@@ -14,11 +16,30 @@ public class Player : MonoBehaviour
     // スクリーン座標をワールド座標に変換した位置座標
     private Vector3 screenToWorldPointPosition;
     private State state = null;
+    private float lerpPower = 1.5f;
 
     // Start is called before the first frame update
     void Start()
     {
         state = this.gameObject.AddComponent<State>();
+        switch (SceneLoader.GetNowScene())
+        {
+            case SceneLoader.Scene.Easy:
+                lerpPower = easyLerpPower;
+                break;
+            case SceneLoader.Scene.Normal:
+                lerpPower = normalLerpPower;
+                break;
+            case SceneLoader.Scene.Hard:
+                lerpPower = hardLerpPower;
+                break;
+            case SceneLoader.Scene.None:
+                lerpPower = easyLerpPower;
+                break;
+            default:
+                lerpPower = easyLerpPower;
+                break;
+        }
     }
 
     // Update is called once per frame
