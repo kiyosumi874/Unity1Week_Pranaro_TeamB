@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2676772568007063161}
   - component: {fileID: 257347977}
   - component: {fileID: 257347978}
+  - component: {fileID: -4671944021980164241}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -476,3 +477,21 @@ PolygonCollider2D:
       - {x: 3.6312153, y: 3.494475}
       - {x: 3.5856352, y: 3.418508}
       - {x: 3.6160219, y: 3.4337015}
+--- !u!114 &-4671944021980164241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212342413769333499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35944c3fbc7d7044a88d5701c231783b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockDamage: 0
+  falliingRockDamage: 0
+  normalFishDamage: 0
+  rock: {fileID: 0}
+  fallingRock: {fileID: 0}
+  normalFish: {fileID: 0}
