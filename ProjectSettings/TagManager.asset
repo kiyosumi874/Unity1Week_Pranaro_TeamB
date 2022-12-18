@@ -7,6 +7,7 @@ TagManager:
   - Goal
   - Collider
   - dia
+  - Enemy
   layers:
   - Default
   - TransparentFX
