@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class O2Gauge : MonoBehaviour
 {
     [SerializeField] private Image fullImage = null;
+    [SerializeField] private SceneChanger sceneChanger = null;
     [SerializeField] private float easyDecreaseO2 = 0.01f;
     [SerializeField] private float normalDecreaseO2 = 0.025f;
     [SerializeField] private float hardDecreaseO2 = 0.05f;
@@ -36,6 +37,10 @@ public class O2Gauge : MonoBehaviour
     void Update()
     {
         fullImage.fillAmount -= decreaseO2 * Time.deltaTime;
+        if (fullImage.fillAmount <= 0.0f)
+        {
+            sceneChanger.ChangeScene();
+        }
     }
 
     /// <summary>

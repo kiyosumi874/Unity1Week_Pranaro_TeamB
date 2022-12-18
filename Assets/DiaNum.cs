@@ -12,6 +12,11 @@ public class DiaNum : MonoBehaviour
         text.text = string.Format("{0:0}", ++diaNum);
     }
 
+    public int GetDiaNum()
+    {
+        return diaNum;
+    }
+
     public void SubDia()
     {
         if (diaNum > 0)
