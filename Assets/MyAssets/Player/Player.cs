@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private SceneChanger sceneChanger = null;
     [SerializeField] private StateManager stateManager = null;
     [SerializeField] private O2Gauge o2Gauge = null;
+    [SerializeField] private DiaNum diaNum = null;
 
     // à íuç¿ïW
     private Vector3 position;
@@ -79,6 +80,11 @@ public class Player : MonoBehaviour
             collision.enabled = false;
             stateManager.SetStateAll(State.StateType.Stop);
             sceneChanger.ChangeScene();
+        }
+        if (collision.CompareTag("dia"))
+        {
+            diaNum.GetDia();
+            collision.gameObject.SetActive(false);
         }
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goal
   - Collider
+  - dia
   layers:
   - Default
   - TransparentFX
