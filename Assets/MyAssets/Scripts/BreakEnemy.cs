@@ -20,6 +20,7 @@ public class BreakEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            //this.img.color = new Color(0.5f, 0f, 0f, 0.5f);
             Destroy(other.gameObject);
         }
     }
