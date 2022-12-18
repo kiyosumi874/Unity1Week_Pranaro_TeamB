@@ -11,6 +11,7 @@ public class MoveObj : MonoBehaviour
     public float nowPower;
     private State state = null;
     public float wh;
+
     void Start()
     {
         nowPower = 0.0f;
@@ -47,10 +48,11 @@ public class MoveObj : MonoBehaviour
         else
         {
             nowPower += stopPower * this.wh;
-            if (nowPower > 0.0f)
-            {
-                nowPower = 0.0f;
-            }
+            // ‰º‚É~‚è‚ç‚ê‚È‚­‚È‚é‚æ‚¤‚É‚·‚é
+            //if (nowPower > 0.0f)
+            //{
+            //    nowPower = 0.0f;
+            //}
         }
 
         this.transform.Translate(0.0f, Time.deltaTime * nowPower, 0.0f);
