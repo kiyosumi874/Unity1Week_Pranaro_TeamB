@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float lerpPower = 5.0f;
     [SerializeField] private SceneChanger sceneChanger = null;
     [SerializeField] private StateManager stateManager = null;
+    [SerializeField] private O2Gauge o2Gauge = null;
 
     // à íuç¿ïW
     private Vector3 position;
@@ -45,6 +46,11 @@ public class Player : MonoBehaviour
             stateManager.SetStateAll(State.StateType.Stop);
             sceneChanger.ChangeScene();
         }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        o2Gauge.ChangeO2Gauge(-0.2f);
     }
 
 }

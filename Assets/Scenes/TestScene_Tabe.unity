@@ -1948,6 +1948,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2212342413769333496, guid: 855286d784119304d95a4dab2a9d018a, type: 3}
+      propertyPath: o2Gauge
+      value: 
+      objectReference: {fileID: 6340852809932091194}
+    - target: {fileID: 2212342413769333496, guid: 855286d784119304d95a4dab2a9d018a, type: 3}
       propertyPath: lerpPower
       value: 1
       objectReference: {fileID: 0}
@@ -2313,6 +2317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1274515792}
     m_Modifications:
+    - target: {fileID: 1422758254092159756, guid: ce4d85cd3dcea87488629e1d2c547f0a, type: 3}
+      propertyPath: decreaseO2
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3854927001891811467, guid: ce4d85cd3dcea87488629e1d2c547f0a, type: 3}
       propertyPath: m_Name
       value: O2Gauge
@@ -2408,3 +2416,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5399808507313800462, guid: ce4d85cd3dcea87488629e1d2c547f0a, type: 3}
   m_PrefabInstance: {fileID: 6340852809932091192}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6340852809932091194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1422758254092159756, guid: ce4d85cd3dcea87488629e1d2c547f0a, type: 3}
+  m_PrefabInstance: {fileID: 6340852809932091192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88d1087f002ce14eb679b96f67ef76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

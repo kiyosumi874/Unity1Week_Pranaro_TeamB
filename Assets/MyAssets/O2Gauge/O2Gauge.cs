@@ -6,7 +6,13 @@ using UnityEngine.UI;
 public class O2Gauge : MonoBehaviour
 {
     [SerializeField] private Image fullImage = null;
-    
+    [SerializeField] private float decreaseO2 = 0.05f;
+
+    void Update()
+    {
+        fullImage.fillAmount -= decreaseO2 * Time.deltaTime;
+    }
+
     /// <summary>
     /// O2Gauge‚ð•Ï‰»‚³‚¹‚é
     /// </summary>
