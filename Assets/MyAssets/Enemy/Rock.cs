@@ -8,6 +8,7 @@ public class Rock : MonoBehaviour
     GameObject MoveObj;
     MoveObj script;
     private float delta;
+
     // Start is called before the first frame update
     void Start()
     {
