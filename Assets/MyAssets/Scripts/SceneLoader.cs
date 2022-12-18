@@ -84,7 +84,9 @@ public static class SceneLoader
     private static void ChangeToSuccess()
     {
         nowScene = Scene.Success;
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(100);
+        var go = GameObject.Find("DiaNumStr");
+        int num = go.GetComponent<DiaNum>().GetDiaNum();
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(num);
     }
 
     private static void ChangeToInstruction()
