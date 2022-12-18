@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be38c73342f251343b5059258e09ec88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpPower: 1
+  easyLerpPower: 1.5
+  normalLerpPower: 1
+  hardLerpPower: 0.5
   sceneChanger: {fileID: 0}
   stateManager: {fileID: 0}
   o2Gauge: {fileID: 0}
