@@ -16,8 +16,6 @@ public class GenerateFallingRock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.FallingRock = GameObject.Find("FallingRock");
-        this.MoveObj = GameObject.Find("MoveObj");
         this.script = FallingRock.GetComponent<FallingRock>();
         this.speed = this.script._Speed;
         this.span = this.script._span;
@@ -31,7 +29,7 @@ public class GenerateFallingRock : MonoBehaviour
         {
             this.delta = 0;
             GameObject go = Instantiate(FallingRock, MoveObj.transform) as GameObject;
-            go.transform.position = new Vector3(0, 25, 0);
+            go.transform.position = new Vector3(0, transform.position.y, 0);
         }
     }
 }
