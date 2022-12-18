@@ -15,9 +15,9 @@ public class NomalFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -7.0f)
+        if (transform.position.x < -2.5f)
             this.direction = 1;
-        if (transform.position.x > 6.0f)
+        if (transform.position.x > 2.5f)
             this.direction = -1;
         transform.Translate(_Speed * Time.deltaTime * this.direction, 0.0f, 0.0f);
     }
