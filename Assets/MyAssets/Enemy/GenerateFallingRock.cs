@@ -7,6 +7,7 @@ public class GenerateFallingRock : MonoBehaviour
     [SerializeField] private float _span;
     float delta = 0;
     public GameObject FallingRock;
+    public GameObject MoveObj;
     FallingRock script;
     float speed;
     float span;
@@ -16,6 +17,7 @@ public class GenerateFallingRock : MonoBehaviour
     void Start()
     {
         this.FallingRock = GameObject.Find("FallingRock");
+        this.MoveObj = GameObject.Find("MoveObj");
         this.script = FallingRock.GetComponent<FallingRock>();
         this.speed = this.script._Speed;
         this.span = this.script._span;
@@ -28,10 +30,8 @@ public class GenerateFallingRock : MonoBehaviour
         if(this.delta > this._span)
         {
             this.delta = 0;
-            GameObject go = Instantiate(FallingRock) as GameObject;
+            GameObject go = Instantiate(FallingRock, MoveObj.transform) as GameObject;
             go.transform.position = new Vector3(0, 25, 0);
-            //this.GereratePoint = speed * span *  10;
-            //go.transform.position = transform.Translate(0.0f, this.GereratePoint, 0.0f);
         }
     }
 }
