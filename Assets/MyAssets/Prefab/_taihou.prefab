@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 986654770821348005}
   - component: {fileID: 2977065170371979065}
   - component: {fileID: 211346691425485278}
-  - component: {fileID: -7468721634438999250}
   - component: {fileID: 7379974970527755036}
+  - component: {fileID: 2945834261147330615}
   m_Layer: 0
   m_Name: _taihou
   m_TagString: Untagged
@@ -99,7 +99,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548a4f3e1e0730a46b9757869bcf29e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &-7468721634438999250
+--- !u!114 &7379974970527755036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959453045537529835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25f076b8426d7d4d86f2fe28753edc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  span: 2
+  CannonBall: {fileID: 1314659338556125137, guid: 8e0c30a735bd22348a69b1df67f24972, type: 3}
+  MoveObj: {fileID: 0}
+--- !u!60 &2945834261147330615
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,18 +147,3 @@ PolygonCollider2D:
       - {x: 0.13, y: 0.01}
       - {x: 0.089999996, y: 0.049999997}
       - {x: 0.02, y: 0.06}
---- !u!114 &7379974970527755036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959453045537529835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f25f076b8426d7d4d86f2fe28753edc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  span: 2
-  CannonBall: {fileID: 1314659338556125137, guid: 8e0c30a735bd22348a69b1df67f24972, type: 3}
-  MoveObj: {fileID: 0}
