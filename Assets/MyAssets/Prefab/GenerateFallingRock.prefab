@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _span: 2
   FallingRock: {fileID: 7364599763658354581, guid: b375218dbed260d4f9bf93c649fa8926, type: 3}
-  MoveObj: {fileID: 0}
+  BackGroundManager: {fileID: 410534075421538919, guid: 7c12f3b39e3e0b644b354e0c18ef7da5, type: 3}
