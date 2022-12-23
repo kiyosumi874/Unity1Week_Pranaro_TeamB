@@ -24,7 +24,7 @@ public class ChaseFish : MonoBehaviour
         {
             //‹ß‚Ã‚­‚Æ’Ç‚Á‚Ä‚­‚é“G
             //transform.Translate(nowDistance/1000 * speed);
-            transform.Translate(nowDistance.x / Mathf.Abs(nowDistance) * speed, nowDistance.y / Mathf.Abs(nowDistance)* speed, 0.0f);
+            transform.Translate(nowDistance.x / 2.0f/*Mathf.Abs(nowDistance) * speed*/, nowDistance.y / 2.0f/*Mathf.Abs(nowDistance)* speed*/, 0.0f);
         }
     }
 }
