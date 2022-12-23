@@ -9,7 +9,7 @@ public class ChaseFish : MonoBehaviour
     [SerializeField] private float chaseDistance;
     public GameObject player;
     private Vector3 nowDistance;
-
+    private bool isInvate;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +19,33 @@ public class ChaseFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nowDistance = player.transform.position - transform.position;
-        if(nowDistance.y < chaseDistance)
+        if (isInvate)
         {
-            //‹ß‚Ã‚­‚Æ’Ç‚Á‚Ä‚­‚é“G
-            //transform.Translate(nowDistance/1000 * speed);
-            transform.Translate(nowDistance.x / 2.0f/*Mathf.Abs(nowDistance) * speed*/, nowDistance.y / 2.0f/*Mathf.Abs(nowDistance)* speed*/, 0.0f);
+            nowDistance = player.transform.position - transform.position;
+            if (nowDistance.y < chaseDistance)
+            {
+                //‹ß‚Ã‚­‚Æ’Ç‚Á‚Ä‚­‚é“G
+                nowDistance = Vector3.Normalize(nowDistance);
+                //e‚ÌˆÊ’u‚ð•ÏX‚³‚¹‚é
+                //parent.transform.Translate(nowDistance * speed * Time.deltaTime);
+            }
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other)
+        {
+            isInvate = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other)
+        {
+            isInvate = false;
+        }
+
     }
 }

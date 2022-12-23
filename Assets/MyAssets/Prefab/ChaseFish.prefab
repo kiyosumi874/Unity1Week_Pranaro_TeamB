@@ -101,7 +101,7 @@ MonoBehaviour:
   chaseTime: 1
   speed: 1
   chaseDistance: 1
-  player: {fileID: 0}
+  player: {fileID: 2212342413769333499, guid: 855286d784119304d95a4dab2a9d018a, type: 3}
 --- !u!114 &-6994888306467999115
 MonoBehaviour:
   m_ObjectHideFlags: 0
