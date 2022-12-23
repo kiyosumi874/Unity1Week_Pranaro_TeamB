@@ -23,7 +23,8 @@ public class ChaseFish : MonoBehaviour
         if(nowDistance.y < chaseDistance)
         {
             //‹ß‚Ã‚­‚Æ’Ç‚Á‚Ä‚­‚é“G
-            transform.Translate(nowDistance/1000 * speed);
+            //transform.Translate(nowDistance/1000 * speed);
+            transform.Translate(nowDistance.x / Mathf.Abs(nowDistance) * speed, nowDistance.y / Mathf.Abs(nowDistance)* speed, 0.0f);
         }
     }
 }
