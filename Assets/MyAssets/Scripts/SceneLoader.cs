@@ -108,7 +108,7 @@ public static class SceneLoader
                 break;
         }
         nowScene = Scene.Success;
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking((num + num2)*num3);
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking((num + num2/2)*num3);
     }
 
     private static void ChangeToInstruction()
