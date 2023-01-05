@@ -61,19 +61,19 @@ public static class SceneLoader
     private static void ChangeToEasy()
     {
         nowScene = Scene.Easy;
-        SceneManager.LoadScene("EasyScene");
+        SceneManager.LoadScene("CompletedStage");
     }
 
     private static void ChangeToNormal()
     {
         nowScene = Scene.Normal;
-        SceneManager.LoadScene("EasyScene");
+        SceneManager.LoadScene("CompletedStage");
     }
 
     private static void ChangeToHard()
     {
         nowScene = Scene.Hard;
-        SceneManager.LoadScene("EasyScene");
+        SceneManager.LoadScene("CompletedStage");
     }
 
     private static void ChangeToFailed()
