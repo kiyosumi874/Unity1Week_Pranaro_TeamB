@@ -518,8 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4273da2ebd011a49bce1855e2c7f148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stealthTime: 1
-  attackTime: 1
+  stealthTime: 3
+  attackTime: 3
   player: {fileID: 0}
   jellyfish: {fileID: 3412850285009293260}
 --- !u!1 &8590163628700460497

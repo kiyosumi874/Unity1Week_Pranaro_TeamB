@@ -6,6 +6,8 @@ public class Taihou : MonoBehaviour
 {
     [SerializeField] private float span;
     float delta = 0;
+    float scale;
+    float startPoint;
     public GameObject CannonBall;
     //public GameObject BackGroundManager;
     GameObject go;
@@ -14,8 +16,17 @@ public class Taihou : MonoBehaviour
     void Start()
     {
         delta = 0.0f;
+        scale = transform.localScale.x;
+        if(scale > 0)
+        {
+            startPoint = 1;
+        }
+        else
+        {
+            startPoint = -1;
+        }
         go = Instantiate(CannonBall, transform) as GameObject;
-        go.transform.position = new Vector3(transform.position.x-0.5f, transform.position.y, 0);
+        go.transform.position = new Vector3(transform.position.x- 1.5f * startPoint, transform.position.y, 0);
     }
 
     // Update is called once per frame
@@ -24,7 +35,7 @@ public class Taihou : MonoBehaviour
         this.delta += Time.deltaTime;
         if(delta > span){
             go = Instantiate(CannonBall, transform) as GameObject;
-            go.transform.position = new Vector3(transform.position.x-0.5f, transform.position.y, 0);
+            go.transform.position = new Vector3(transform.position.x- 1.5f * startPoint, transform.position.y, 0);
             delta = 0.0f;
         }
     }
