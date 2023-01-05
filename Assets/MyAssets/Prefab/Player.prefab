@@ -107,6 +107,7 @@ MonoBehaviour:
   sceneChanger: {fileID: 0}
   stateManager: {fileID: 0}
   o2Gauge: {fileID: 0}
+  diaNum: {fileID: 0}
 --- !u!50 &2212342413769333503
 Rigidbody2D:
   serializedVersion: 4
