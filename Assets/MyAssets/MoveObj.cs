@@ -39,6 +39,7 @@ public class MoveObj : MonoBehaviour
 
     public void mouseScroll()
     {
+
         if (this.transform.position.y > 15.0f)
         {
             nowPower = 0.0f;
@@ -49,6 +50,7 @@ public class MoveObj : MonoBehaviour
         Debug.Log(this.wh);
         if (this.wh < 0)
         {
+            GetComponent<AudioSource>().Play();
             nowPower += power * this.wh;
         }
         else
