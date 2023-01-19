@@ -34,6 +34,10 @@ public class MoveObj : MonoBehaviour
             }
             mouseScroll();
         }
+        if(nowPower == 0.0f)
+        {
+            GetComponent<AudioSource>().Pause();
+        }
         
     }
 
@@ -47,15 +51,29 @@ public class MoveObj : MonoBehaviour
             return;
         }
         this.wh = Input.mouseScrollDelta.y;
-        Debug.Log(this.wh);
+        //Debug.Log(this.wh);
         if (this.wh < 0)
         {
             GetComponent<AudioSource>().Play();
             nowPower += power * this.wh;
         }
+        else if(this.wh > 0){
+            if(nowPower < 0)
+            {
+                nowPower = 0.0f;
+            }
+            else
+            {
+                nowPower = 5.0f;
+            }
+        }
         else
         {
             nowPower += stopPower * this.wh;
+            if (nowPower > 0)
+            {
+                nowPower -= 0.1f;
+            }
             // ‰º‚É~‚è‚ç‚ê‚È‚­‚È‚é‚æ‚¤‚É‚·‚é
             //if (nowPower > 0.0f)
             //{
