@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Goal"))
         {
+            GetComponent<AudioSource>().Play();
             collision.enabled = false;
             stateManager.SetStateAll(State.StateType.Stop);
             sceneChanger.ChangeScene();
