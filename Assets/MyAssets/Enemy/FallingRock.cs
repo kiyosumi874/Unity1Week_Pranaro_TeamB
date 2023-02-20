@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class FallingRock : MonoBehaviour
@@ -19,10 +20,20 @@ public class FallingRock : MonoBehaviour
     {
         transform.Translate(0.0f, -_Speed * Time.deltaTime * 5.0f, 0.0f);
         this.delta += Time.deltaTime;
+        
         if(this.delta > this._span)
         {
             Destroy(gameObject);
             this.delta = 0;
         }
+        
+
     }
+    //void OnColliderEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        Destroy(other);
+    //    }
+    //}
 }

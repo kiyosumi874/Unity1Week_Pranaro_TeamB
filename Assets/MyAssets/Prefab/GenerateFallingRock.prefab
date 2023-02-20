@@ -44,6 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12bcc174590fd4408c9a05a9d72d45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _span: 2
+  _span: 3
   FallingRock: {fileID: 7364599763658354581, guid: b375218dbed260d4f9bf93c649fa8926, type: 3}
-  BackGroundManager: {fileID: 410534075421538919, guid: 7c12f3b39e3e0b644b354e0c18ef7da5, type: 3}
